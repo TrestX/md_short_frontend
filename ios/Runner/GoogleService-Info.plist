@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>397171372527-gk8bi74d0hv7o4hedkt90clrtmc55nvb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.397171372527-gk8bi74d0hv7o4hedkt90clrtmc55nvb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDgJuc_ZD-FKKWIfDqUikCOSugCF8lRN-g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>397171372527</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.doceree.mdshort</string>
+	<key>PROJECT_ID</key>
+	<string>md-shorts</string>
+	<key>STORAGE_BUCKET</key>
+	<string>md-shorts.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:397171372527:ios:f03d04173d576b2e15861a</string>
+</dict>
+</plist>
