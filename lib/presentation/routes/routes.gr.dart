@@ -7,9 +7,10 @@
 // **************************************************************************
 // AutoRouteGenerator
 // **************************************************************************
+//
+// ignore_for_file: type=lint
 
 import 'package:auto_route/auto_route.dart' as _i22;
-import 'package:flutter/foundation.dart' as _i24;
 import 'package:flutter/material.dart' as _i23;
 
 import '../auth/login/forgot_password/forgot_pass_otp_verification.dart'
@@ -189,17 +190,20 @@ class AppRouter extends _i22.RootStackRouter {
       ];
 }
 
-/// generated route for [_i1.SplashPage]
+/// generated route for
+/// [_i1.SplashPage]
 class SplashPageRoute extends _i22.PageRouteInfo<void> {
-  const SplashPageRoute() : super(name, path: '/');
+  const SplashPageRoute() : super(SplashPageRoute.name, path: '/');
 
   static const String name = 'SplashPageRoute';
 }
 
-/// generated route for [_i2.LoginPage]
+/// generated route for
+/// [_i2.LoginPage]
 class LoginPageRoute extends _i22.PageRouteInfo<LoginPageRouteArgs> {
-  LoginPageRoute({_i24.Key? key})
-      : super(name, path: '/login', args: LoginPageRouteArgs(key: key));
+  LoginPageRoute({_i23.Key? key})
+      : super(LoginPageRoute.name,
+            path: '/login', args: LoginPageRouteArgs(key: key));
 
   static const String name = 'LoginPageRoute';
 }
@@ -207,7 +211,7 @@ class LoginPageRoute extends _i22.PageRouteInfo<LoginPageRouteArgs> {
 class LoginPageRouteArgs {
   const LoginPageRouteArgs({this.key});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   @override
   String toString() {
@@ -215,10 +219,11 @@ class LoginPageRouteArgs {
   }
 }
 
-/// generated route for [_i3.SignUpPage]
+/// generated route for
+/// [_i3.SignUpPage]
 class SignUpPageRoute extends _i22.PageRouteInfo<SignUpPageRouteArgs> {
-  SignUpPageRoute({_i24.Key? key, required List<String> categories})
-      : super(name,
+  SignUpPageRoute({_i23.Key? key, required List<String> categories})
+      : super(SignUpPageRoute.name,
             path: '/signup',
             args: SignUpPageRouteArgs(key: key, categories: categories));
 
@@ -228,7 +233,7 @@ class SignUpPageRoute extends _i22.PageRouteInfo<SignUpPageRouteArgs> {
 class SignUpPageRouteArgs {
   const SignUpPageRouteArgs({this.key, required this.categories});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   final List<String> categories;
 
@@ -238,18 +243,21 @@ class SignUpPageRouteArgs {
   }
 }
 
-/// generated route for [_i4.CategoryPage]
+/// generated route for
+/// [_i4.CategoryPage]
 class CategoryPageRoute extends _i22.PageRouteInfo<void> {
-  const CategoryPageRoute() : super(name, path: '/categories');
+  const CategoryPageRoute()
+      : super(CategoryPageRoute.name, path: '/categories');
 
   static const String name = 'CategoryPageRoute';
 }
 
-/// generated route for [_i5.PhoneVerificationScreen]
+/// generated route for
+/// [_i5.PhoneVerificationScreen]
 class PhoneVerificationScreenRoute
     extends _i22.PageRouteInfo<PhoneVerificationScreenRouteArgs> {
-  PhoneVerificationScreenRoute({_i24.Key? key, required String email})
-      : super(name,
+  PhoneVerificationScreenRoute({_i23.Key? key, required String email})
+      : super(PhoneVerificationScreenRoute.name,
             path: '/phoneVerify',
             args: PhoneVerificationScreenRouteArgs(key: key, email: email));
 
@@ -259,7 +267,7 @@ class PhoneVerificationScreenRoute
 class PhoneVerificationScreenRouteArgs {
   const PhoneVerificationScreenRouteArgs({this.key, required this.email});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   final String email;
 
@@ -269,24 +277,29 @@ class PhoneVerificationScreenRouteArgs {
   }
 }
 
-/// generated route for [_i6.EmailVerificationScreen]
+/// generated route for
+/// [_i6.EmailVerificationScreen]
 class EmailVerificationScreenRoute extends _i22.PageRouteInfo<void> {
-  const EmailVerificationScreenRoute() : super(name, path: '/emailVerify');
+  const EmailVerificationScreenRoute()
+      : super(EmailVerificationScreenRoute.name, path: '/emailVerify');
 
   static const String name = 'EmailVerificationScreenRoute';
 }
 
-/// generated route for [_i7.FinalConfirmation]
+/// generated route for
+/// [_i7.FinalConfirmation]
 class FinalConfirmationRoute extends _i22.PageRouteInfo<void> {
-  const FinalConfirmationRoute() : super(name, path: '/finalStep');
+  const FinalConfirmationRoute()
+      : super(FinalConfirmationRoute.name, path: '/finalStep');
 
   static const String name = 'FinalConfirmationRoute';
 }
 
-/// generated route for [_i8.HomePage]
+/// generated route for
+/// [_i8.HomePage]
 class HomePageRoute extends _i22.PageRouteInfo<HomePageRouteArgs> {
-  HomePageRoute({_i24.Key? key, String newID = ""})
-      : super(name,
+  HomePageRoute({_i23.Key? key, String newID = ""})
+      : super(HomePageRoute.name,
             path: '/home/:id',
             args: HomePageRouteArgs(key: key, newID: newID),
             rawPathParams: {'id': newID});
@@ -297,7 +310,7 @@ class HomePageRoute extends _i22.PageRouteInfo<HomePageRouteArgs> {
 class HomePageRouteArgs {
   const HomePageRouteArgs({this.key, this.newID = ""});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   final String newID;
 
@@ -307,38 +320,45 @@ class HomePageRouteArgs {
   }
 }
 
-/// generated route for [_i9.ProfilePage]
+/// generated route for
+/// [_i9.ProfilePage]
 class ProfilePageRoute extends _i22.PageRouteInfo<void> {
-  const ProfilePageRoute() : super(name, path: '/profile');
+  const ProfilePageRoute() : super(ProfilePageRoute.name, path: '/profile');
 
   static const String name = 'ProfilePageRoute';
 }
 
-/// generated route for [_i10.SettingScreen]
+/// generated route for
+/// [_i10.SettingScreen]
 class SettingScreenRoute extends _i22.PageRouteInfo<void> {
-  const SettingScreenRoute() : super(name, path: '/settings');
+  const SettingScreenRoute()
+      : super(SettingScreenRoute.name, path: '/settings');
 
   static const String name = 'SettingScreenRoute';
 }
 
-/// generated route for [_i11.NotificationScreen]
+/// generated route for
+/// [_i11.NotificationScreen]
 class NotificationScreenRoute extends _i22.PageRouteInfo<void> {
-  const NotificationScreenRoute() : super(name, path: '/notification');
+  const NotificationScreenRoute()
+      : super(NotificationScreenRoute.name, path: '/notification');
 
   static const String name = 'NotificationScreenRoute';
 }
 
-/// generated route for [_i12.InterestPage]
+/// generated route for
+/// [_i12.InterestPage]
 class InterestPageRoute extends _i22.PageRouteInfo<void> {
-  const InterestPageRoute() : super(name, path: '/interest');
+  const InterestPageRoute() : super(InterestPageRoute.name, path: '/interest');
 
   static const String name = 'InterestPageRoute';
 }
 
-/// generated route for [_i13.PrivacyPolicy]
+/// generated route for
+/// [_i13.PrivacyPolicy]
 class PrivacyPolicyRoute extends _i22.PageRouteInfo<PrivacyPolicyRouteArgs> {
-  PrivacyPolicyRoute({_i24.Key? key})
-      : super(name,
+  PrivacyPolicyRoute({_i23.Key? key})
+      : super(PrivacyPolicyRoute.name,
             path: '/privacy_policy', args: PrivacyPolicyRouteArgs(key: key));
 
   static const String name = 'PrivacyPolicyRoute';
@@ -347,7 +367,7 @@ class PrivacyPolicyRoute extends _i22.PageRouteInfo<PrivacyPolicyRouteArgs> {
 class PrivacyPolicyRouteArgs {
   const PrivacyPolicyRouteArgs({this.key});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   @override
   String toString() {
@@ -355,12 +375,13 @@ class PrivacyPolicyRouteArgs {
   }
 }
 
-/// generated route for [_i14.CustomBottomNavigationBar]
+/// generated route for
+/// [_i14.CustomBottomNavigationBar]
 class CustomBottomNavigationBarRoute
     extends _i22.PageRouteInfo<CustomBottomNavigationBarRouteArgs> {
   CustomBottomNavigationBarRoute(
-      {_i24.Key? key, String search = "", int index = 0})
-      : super(name,
+      {_i23.Key? key, String search = "", int index = 0})
+      : super(CustomBottomNavigationBarRoute.name,
             path: '/main',
             args: CustomBottomNavigationBarRouteArgs(
                 key: key, search: search, index: index));
@@ -372,7 +393,7 @@ class CustomBottomNavigationBarRouteArgs {
   const CustomBottomNavigationBarRouteArgs(
       {this.key, this.search = "", this.index = 0});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   final String search;
 
@@ -384,10 +405,11 @@ class CustomBottomNavigationBarRouteArgs {
   }
 }
 
-/// generated route for [_i15.VerifyPage]
+/// generated route for
+/// [_i15.VerifyPage]
 class VerifyPageRoute extends _i22.PageRouteInfo<VerifyPageRouteArgs> {
-  VerifyPageRoute({_i24.Key? key, required String? token})
-      : super(name,
+  VerifyPageRoute({_i23.Key? key, required String? token})
+      : super(VerifyPageRoute.name,
             path: '/verifyemail/:id',
             args: VerifyPageRouteArgs(key: key, token: token),
             rawPathParams: {'id': token});
@@ -398,7 +420,7 @@ class VerifyPageRoute extends _i22.PageRouteInfo<VerifyPageRouteArgs> {
 class VerifyPageRouteArgs {
   const VerifyPageRouteArgs({this.key, required this.token});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   final String? token;
 
@@ -408,11 +430,12 @@ class VerifyPageRouteArgs {
   }
 }
 
-/// generated route for [_i16.ProfileFormPage]
+/// generated route for
+/// [_i16.ProfileFormPage]
 class ProfileFormPageRoute
     extends _i22.PageRouteInfo<ProfileFormPageRouteArgs> {
-  ProfileFormPageRoute({_i24.Key? key})
-      : super(name,
+  ProfileFormPageRoute({_i23.Key? key})
+      : super(ProfileFormPageRoute.name,
             path: '/edit/profile', args: ProfileFormPageRouteArgs(key: key));
 
   static const String name = 'ProfileFormPageRoute';
@@ -421,7 +444,7 @@ class ProfileFormPageRoute
 class ProfileFormPageRouteArgs {
   const ProfileFormPageRouteArgs({this.key});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   @override
   String toString() {
@@ -429,11 +452,12 @@ class ProfileFormPageRouteArgs {
   }
 }
 
-/// generated route for [_i17.InterestCategoryPage]
+/// generated route for
+/// [_i17.InterestCategoryPage]
 class InterestCategoryPageRoute
     extends _i22.PageRouteInfo<InterestCategoryPageRouteArgs> {
-  InterestCategoryPageRoute({required List<String> myCategories, _i24.Key? key})
-      : super(name,
+  InterestCategoryPageRoute({required List<String> myCategories, _i23.Key? key})
+      : super(InterestCategoryPageRoute.name,
             path: '/interest/update',
             args: InterestCategoryPageRouteArgs(
                 myCategories: myCategories, key: key));
@@ -446,7 +470,7 @@ class InterestCategoryPageRouteArgs {
 
   final List<String> myCategories;
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   @override
   String toString() {
@@ -454,18 +478,21 @@ class InterestCategoryPageRouteArgs {
   }
 }
 
-/// generated route for [_i18.ForgotPasswordScreen]
+/// generated route for
+/// [_i18.ForgotPasswordScreen]
 class ForgotPasswordScreenRoute extends _i22.PageRouteInfo<void> {
-  const ForgotPasswordScreenRoute() : super(name, path: '/forgotpassword');
+  const ForgotPasswordScreenRoute()
+      : super(ForgotPasswordScreenRoute.name, path: '/forgotpassword');
 
   static const String name = 'ForgotPasswordScreenRoute';
 }
 
-/// generated route for [_i19.ForgotVerificationScreen]
+/// generated route for
+/// [_i19.ForgotVerificationScreen]
 class ForgotVerificationScreenRoute
     extends _i22.PageRouteInfo<ForgotVerificationScreenRouteArgs> {
-  ForgotVerificationScreenRoute({_i24.Key? key})
-      : super(name,
+  ForgotVerificationScreenRoute({_i23.Key? key})
+      : super(ForgotVerificationScreenRoute.name,
             path: '/updatepass',
             args: ForgotVerificationScreenRouteArgs(key: key));
 
@@ -475,7 +502,7 @@ class ForgotVerificationScreenRoute
 class ForgotVerificationScreenRouteArgs {
   const ForgotVerificationScreenRouteArgs({this.key});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   @override
   String toString() {
@@ -483,10 +510,11 @@ class ForgotVerificationScreenRouteArgs {
   }
 }
 
-/// generated route for [_i20.ViewAllPage]
+/// generated route for
+/// [_i20.ViewAllPage]
 class ViewAllPageRoute extends _i22.PageRouteInfo<ViewAllPageRouteArgs> {
-  ViewAllPageRoute({_i24.Key? key, required String title})
-      : super(name,
+  ViewAllPageRoute({_i23.Key? key, required String title})
+      : super(ViewAllPageRoute.name,
             path: '/viewall',
             args: ViewAllPageRouteArgs(key: key, title: title));
 
@@ -496,7 +524,7 @@ class ViewAllPageRoute extends _i22.PageRouteInfo<ViewAllPageRouteArgs> {
 class ViewAllPageRouteArgs {
   const ViewAllPageRouteArgs({this.key, required this.title});
 
-  final _i24.Key? key;
+  final _i23.Key? key;
 
   final String title;
 
@@ -506,9 +534,10 @@ class ViewAllPageRouteArgs {
   }
 }
 
-/// generated route for [_i21.BookmarkPage]
+/// generated route for
+/// [_i21.BookmarkPage]
 class BookmarkPageRoute extends _i22.PageRouteInfo<void> {
-  const BookmarkPageRoute() : super(name, path: '/bookmark');
+  const BookmarkPageRoute() : super(BookmarkPageRoute.name, path: '/bookmark');
 
   static const String name = 'BookmarkPageRoute';
 }
