@@ -4,6 +4,7 @@ import 'package:MD_Shorts/application/auth/socialMediaLogin/bloc/socialmedialogi
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -289,70 +290,72 @@ class SignUpCardContent extends StatelessWidget {
                       )),
                 ),
                 const SizedBox(height: 10),
-                Platform.isIOS?SizedBox(
-                  width: mediaWidth,
-                  child: ElevatedButton(
-                      onPressed: () async {
-                        try {
-                          final credential =
-                              await SignInWithApple.getAppleIDCredential(
-                            scopes: [
-                              AppleIDAuthorizationScopes.email,
-                              AppleIDAuthorizationScopes.fullName,
-                            ],
-                          );
-                          context.read<SocialmedialoginBloc>().add(
-                              SocialmedialoginEvent.socialSignUp(
-                                  credential.email.toString(),
-                                  credential.givenName.toString(),
-                                  credential.familyName.toString(),
-                                  "",
-                                  credential.authorizationCode.toString(),
-                                  "APPLE",
-                                  "",
-                                  categories));
-                        } catch (error) {
-                          print(error);
-                        }
+                !kIsWeb && Platform.isIOS
+                    ? SizedBox(
+                        width: mediaWidth,
+                        child: ElevatedButton(
+                            onPressed: () async {
+                              try {
+                                final credential =
+                                    await SignInWithApple.getAppleIDCredential(
+                                  scopes: [
+                                    AppleIDAuthorizationScopes.email,
+                                    AppleIDAuthorizationScopes.fullName,
+                                  ],
+                                );
+                                context.read<SocialmedialoginBloc>().add(
+                                    SocialmedialoginEvent.socialSignUp(
+                                        credential.email.toString(),
+                                        credential.givenName.toString(),
+                                        credential.familyName.toString(),
+                                        "",
+                                        credential.authorizationCode.toString(),
+                                        "APPLE",
+                                        "",
+                                        categories));
+                              } catch (error) {
+                                print(error);
+                              }
 
-                        // Create a new credential
-                        // final credential = GoogleAuthProvider.credential(
-                        //   accessToken: googleAuth?.accessToken,
-                        //   idToken: googleAuth?.idToken,
-                        // );
-                        //context.router.navigate(HomePageRoute());
-                      },
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.white,
-                          shape: const StadiumBorder(),
-                          side: const BorderSide(
-                            width: 1.0,
-                            color: Colors.grey,
-                          )),
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                          top: 5.0,
-                          bottom: 5.0,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.network(
-                                "https://img.icons8.com/material-outlined/50/000000/mac-os--v2.png",
-                                width: 30,
-                                height: 30),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            const Text(
-                              'Sign up with Apple',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                          ],
-                        ),
-                      )),
-                ):const SizedBox(height: 10),
-                Platform.isIOS?const SizedBox(height: 10):const SizedBox(height: 10),
+                              // Create a new credential
+                              // final credential = GoogleAuthProvider.credential(
+                              //   accessToken: googleAuth?.accessToken,
+                              //   idToken: googleAuth?.idToken,
+                              // );
+                              //context.router.navigate(HomePageRoute());
+                            },
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.white,
+                                shape: const StadiumBorder(),
+                                side: const BorderSide(
+                                  width: 1.0,
+                                  color: Colors.grey,
+                                )),
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                top: 5.0,
+                                bottom: 5.0,
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.network(
+                                      "https://img.icons8.com/material-outlined/50/000000/mac-os--v2.png",
+                                      width: 30,
+                                      height: 30),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
+                                  const Text(
+                                    'Sign up with Apple',
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                            )),
+                      )
+                    : const SizedBox(height: 10),
+                const SizedBox(height: 10),
                 SizedBox(
                   width: mediaWidth,
                   child: ElevatedButton(

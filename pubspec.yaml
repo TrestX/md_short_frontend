@@ -122,8 +122,8 @@ flutter:
     - assets/config/
     - assets/images/md_shorts.png
     - assets/images/A_blank_flag.png
-  #  - assets/images/appstore.png
-  #  - assets/images/playstore.png
+    - assets/images/appstore.png
+    - assets/images/playstore.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
